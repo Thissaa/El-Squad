@@ -1,0 +1,40 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+.navbar-brand {
+    letter-spacing: 1px;
+}
+
+.list-group-item {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: none;
+}
+
+.list-group-item img {
+    border-radius: 6px;
+}
+
+.list-group-item strong {
+    font-size: 1.1rem;
+}
+
+.list-group-item small {
+    color: #b3b3b3;
+}
+
+.btn-primary {
+    background-color: #1db954;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #1aa34a;
+}
