@@ -23,20 +23,26 @@ fetch("JSON/script.json")
       const image = track.album?.images?.[0]?.url || "";
       const trackUrl = track.external_urls?.spotify || "#";
 
-      const li = document.createElement("li");
-      li.className = "list-group-item d-flex align-items-center gap-3";
-      li.innerHTML = `
-        <img src="${image}" alt="${trackName}" width="64" height="64" class="rounded">
-        <div>
-          <strong>${trackName}</strong><br>
-          <small>Artiest: ${artists}</small><br>
-          <small>Album: ${albumName}</small><br>
-          <small><a href="${trackUrl}" target="_blank" class="text-decoration-none">Luister op Spotify</a></small><br>
-          <small>Toegevoegd door: ${addedBy}</small><br>
-          <small>Toegevoegd op: ${addedAt}</small>
+      const div = document.createElement("div");
+      div.className = "col-md-4";
+
+      div.innerHTML = `
+        <div class="card h-100 shadow-sm">
+          <img src="${image}" class="card-img-top" alt="${trackName}">
+          <div class="card-body">
+            <h6 class="card-title">${trackName}</h6>
+            <p class="card-text mb-1"><small>Artiest: ${artists}</small></p>
+            <p class="card-text mb-1"><small>Album: ${albumName}</small></p>
+            <p class="card-text mb-1">
+              <a href="${trackUrl}" target="_blank" class="text-decoration-none">Luister op Spotify</a>
+            </p>
+            <p class="card-text mb-1"><small>Toegevoegd door: ${addedBy}</small></p>
+            <p class="card-text"><small>Toegevoegd op: ${addedAt}</small></p>
+          </div>
         </div>
       `;
-      list.appendChild(li);
+
+      list.appendChild(div);
     });
   })
   .catch(err => console.error("Fout bij laden JSON:", err));
