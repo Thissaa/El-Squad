@@ -38,9 +38,10 @@ h1, h2 {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 25px;
     margin-top: 20px;
     cursor: pointer;
+    border-radius: 8px;
 }
 
 .ElKnop:hover {
