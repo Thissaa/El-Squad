@@ -30,6 +30,11 @@ h1, h2 {
     color: #b3b3b3;
 }
 
+.card {
+    background-color: #212529;
+    color: white;
+}
+
 .ElKnop {
     background-color: #1db954;
     border: none;
